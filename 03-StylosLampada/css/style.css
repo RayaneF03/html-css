@@ -1,0 +1,46 @@
+body{
+    padding: 0;
+    border: 0;
+    margin: 0;
+background-color: darkgrey;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+h1, h3{
+    margin: 0;
+    padding-top: 10px;
+}
+
+hr{
+    width: 99%;
+    margin-bottom: 30px;
+}
+
+#lampada
+{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+border-radius: 50px;
+}
+
+#botoes-lampada
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0px;
+
+    & button {
+        width: 100px;
+        padding: 5px;
+        margin: 0px 5px;
+        border-radius: 50px;
+        border: 0px;
+    }
+}

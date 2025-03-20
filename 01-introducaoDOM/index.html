@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 - introdução - dom</title>
+  </head>
+  <body style="background-color: thistle; text-align: center">
+    <h1>introdução ao DOM</h1>
+    <p id="meutexto">Texto original.</p>
+    <button onclick="mudarTexto()">Troca de Texto</button>
+    <button onclick="AdicionarTexto()">Adicionar Texto</button>
+    <button onclick="ExcluirTexto()">Excluir Texto</button>
+
+    <script>
+        const mudarTexto = () => {
+            document.getElementById("meutexto") .innerHTML = "Texto alterado";
+        };
+            const AdicionarTexto = () => {
+                document.getElementById("meutexto") .innerHTML += "Texto Adicionado";
+            };
+
+            const ExcluirTexto = () => {
+                document.getElementById("meutexto") .innerHTML = "";
+          
+
+        }
+    </script>
+  </body>
+</html>
