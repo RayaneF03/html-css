@@ -83,26 +83,30 @@ function validaForm() {
 // -------------------------------------------------------------------------------
 const calcular = () => {
   let valPedido = inValorPedido.value;
-  let perDesconto = inPercDesc.value;
-  let valDesconto = inValDesc.value;
-  let valFinalPedido = inValFinal.value;
+  let perDesconto = 0;
+  let valDesconto = 0;
+  let valFinalPedido = 0;
 
   if (valPedido >= 2000) {
     // aplicar desconto de 1.5%
-    alert(">= 2000")
+    perDesconto = 1.5;
   } else if (valPedido >= 1500) {
     // aplicar desconto de 1.0%
-    alert(">= 1500")
+    perDesconto = 1.0;
   } else if (valPedido >= 1000) {
     // aplicar desconto de 0.8%
-    alert(">= 1000")
+    perDesconto = 0.8;
   } else if (valPedido >= 500) {
     // aplicar desconto de 0.5%
-    alert(">= 500")
+    perDesconto = 0.5;
   } else {
     // não aplicar desconto
-    alert("Menor que 500")
-  
+    perDesconto = 0;
   }
 
+  valDesconto = (valPedido * perDesconto) / 100;
+  valFinalPedido = valPedido - valDesconto;
+  inValDesc.value = valDesconto.toFixed(2);
+  inPercDesc.value = perDesconto;
+  inValFinal.value = valFinalPedido.toFixed(2);
 };
